@@ -39,7 +39,7 @@ usage(const char *name)
 {
 	fprintf(stderr,
 "oclVanitygen %s (" OPENSSL_VERSION_TEXT ")\n"
-"Usage: %s [-vqrik1NTS] [-d <device>] [-f <filename>|-] [<pattern>...]\n"
+"Usage: %s [-vqrik1WTS] [-d <device>] [-f <filename>|-] [<pattern>...]\n"
 "Generates a bitcoin receiving address matching <pattern>, and outputs the\n"
 "address and associated private key.  The private key may be stored in a safe\n"
 "location or imported into a bitcoin client to spend any balance received on\n"
