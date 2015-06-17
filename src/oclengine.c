@@ -310,9 +310,9 @@ vg_ocl_dump_info(vg_ocl_context_t *vocp)
 	fprintf(stderr, "Max workgroup size: %"PRSIZET"d\n",
 	       vg_ocl_device_getsizet(did, CL_DEVICE_MAX_WORK_GROUP_SIZE));
 	fprintf(stderr, "Global memory: %ld\n",
-	       vg_ocl_device_getulong(did, CL_DEVICE_GLOBAL_MEM_SIZE));
+	       (long) vg_ocl_device_getulong(did, CL_DEVICE_GLOBAL_MEM_SIZE));
 	fprintf(stderr, "Max allocation: %ld\n",
-	       vg_ocl_device_getulong(did, CL_DEVICE_MAX_MEM_ALLOC_SIZE));
+	       (long) vg_ocl_device_getulong(did, CL_DEVICE_MAX_MEM_ALLOC_SIZE));
 	vocp->voc_dump_done = 1;
 }
 
@@ -1417,7 +1417,7 @@ show_elapsed(struct timeval *tv, const char *place)
         gettimeofday(&now, NULL);
 	timersub(&now, tv, &delta);
 	fprintf(stderr,
-		"%s spent %ld.%06lds\n", place, delta.tv_sec, delta.tv_usec);
+		"%s spent %ld.%06lds\n", place, delta.tv_sec, (long) delta.tv_usec);
 }
 
 
