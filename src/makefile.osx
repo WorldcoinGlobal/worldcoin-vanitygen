@@ -12,8 +12,6 @@ else
 OPENCL_LIBS=-lOpenCL
 endif
 
-most: keyconv vanitygen oclvanitygen oclvanityminer
-
 all: $(PROGS)
 
 vanitygen: vanitygen.o pattern.o util.o
@@ -29,4 +27,4 @@ keyconv: keyconv.o util.o
 	$(CC) $^ -o ../bin/$@ $(CFLAGS) $(LIBS)
 
 clean:
-	rm -f $(OBJS) $(PROGS) $(TESTS)
+	rm -f $(OBJS)
