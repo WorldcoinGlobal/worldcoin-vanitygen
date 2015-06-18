@@ -4,6 +4,7 @@ LIBPATHS=-L$(shell brew --prefix)/lib -L$(shell brew --prefix openssl)/lib
 CFLAGS=-ggdb -O3 -Wall -Qunused-arguments $(INCPATHS) $(LIBPATHS)
 OBJS=vanitygen.o oclvanitygen.o oclvanityminer.o oclengine.o keyconv.o pattern.o util.o
 PROGS=keyconv vanitygen oclvanitygen oclvanityminer
+CPROGS=$(addprefix ../bin/,$(PROGS))
 
 PLATFORM=$(shell uname -s)
 ifeq ($(PLATFORM),Darwin)
@@ -27,4 +28,4 @@ keyconv: keyconv.o util.o
 	$(CC) $^ -o ../bin/$@ $(CFLAGS) $(LIBS)
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(CPROGS)
