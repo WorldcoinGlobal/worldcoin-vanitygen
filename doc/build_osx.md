@@ -1,5 +1,4 @@
-Compile worldcoin-vanitygen on OSX
-========================
+# Compile worldcoin-vanitygen on OSX
 
 http://www.worldcoin.global
 

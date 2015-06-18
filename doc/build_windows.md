@@ -1,5 +1,4 @@
-Compile worldcoin-vanitygen on Windows
-========================
+# Compile worldcoin-vanitygen on Windows
 
 http://www.worldcoin.global
 
