@@ -14,22 +14,18 @@ sudo apt-get update
 sudo apt-get install build-essential git libssl-dev libpcre3-dev
 ```
 
-## Get source code:
+## Compile source code:
 
 ```
 cd /tmp
 git clone https://github.com/WorldcoinGlobal/worldcoin-vanitygen
-```
-
-## Compile sources:
-
-```
 cd worldcoin-vanitygen/src
-./build_unix.sh
+./build_osx.sh
 ```
 
 ## Run worldcoin-vanitygen:
 
 ```
 ./vanitygen -W <pattern>
+./oclvanitygen -d <id_of_device_you_wish_to_use> -W <pattern>
 ```
