@@ -27,5 +27,4 @@ cd worldcoin-vanitygen/src
 
 ```
 ./vanitygen -W <pattern>
-./oclvanitygen -d <id_of_device_you_wish_to_use> -W <pattern>
 ```
